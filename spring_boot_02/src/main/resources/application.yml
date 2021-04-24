@@ -1,0 +1,53 @@
+#基本语法
+#k: v 表示一对键值对，注意：k:后面的空格一定要有
+#以空格的缩进来控制层级关系；只要是左对齐的一列数据，都是同一个层级的
+#属性和值是大小写敏感的
+#值的写法：
+#字面量：普通的值（数字、字符串、Boolean）
+# k: v 直接来写，注意字符串默认不加""或''，
+#      若加上""，则不会转义特殊字符："zheng \n chao" == "zheng 换行 chao"
+#      若加上''，则会转义特殊字符："zheng \n chao" == "zheng \n chao"
+#对象、map（属性值或键值对）
+# user:
+#   id: 001
+#   name: zc
+#数组（List、Set）
+# pets:
+#   - cat
+#   - dog
+#   - pig
+#复杂使用
+#person:
+#  name: 郑超
+#  age: 12
+#  boss: false
+#  birth: 2021/4/24
+#  map:
+#    k1: v1
+#    k2: v2
+#  list:
+#    - l1
+#    - l2
+#    - l3
+#  dog:
+#    name: 小狗
+#    age: 2
+
+#server:
+#  port: 8081
+#spring:
+#  profiles:
+#    active: dev
+#用下列符号分割文档块，来分别配置的不同环境
+#---
+#server:
+#  port: 8083
+#spring:
+#  profiles:
+#    include: dev
+#---
+#server:
+#  port: 8088
+#spring:
+#  profiles:
+#    include: prod
