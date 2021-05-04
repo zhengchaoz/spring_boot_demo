@@ -1,0 +1,28 @@
+#自定义静态资源访问目录，默认的就无法使用
+#spring:
+#  web:
+#    resources:
+#      static-locations: classpath:/hello/,classpath:/zhengc/
+#项目名
+server:
+  servlet:
+    context-path: /crud
+#配置国家化资源文件的基础名，默认：messages
+spring:
+  messages:
+    basename: i18n.login
+#关闭模板引擎的缓存，默认开启
+#并且要在修改页面里Ctrl+F9重新编译
+  thymeleaf:
+    cache: false
+#日期格式化
+  mvc:
+    format:
+      date: yyyy-MM-dd HH:mm
+#实现 restful 的更新操作时，需要将表单数据以 PUT 方法提交，在表单提交的数据中添加 "_method" 数据需要开启以下配置。
+    hiddenmethod:
+      filter:
+        enabled: true
+#springmvc前端控制器默认拦截的请求路径，默认：/
+#    servlet:
+#      path: /
